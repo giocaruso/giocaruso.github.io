@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Giovanni Caruso | Progetti, Risorse e Invenzioni Digitali</title>
+    <meta name="description" content="Portfolio di Giovanni Caruso. Scopri l'Officina dell'Assistente Tecnico e altri progetti dedicati alla creatività e alle risorse digitali per la scuola.">
+    <meta name="keywords" content="Giovanni Caruso, Assistente Tecnico, Officina AT, Risorse ATA, Progetti Digitali, Innovazione Scuola">
+    <meta name="author" content="Giovanni Caruso">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #004a99; /* Colore brand Officina */
+            --secondary: #002d5d;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card-bg: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 800; }
+        .tagline { font-size: 1.2rem; opacity: 0.9; font-weight: 400; }
+
+        /* Main Grid */
+        main {
+            flex-grow: 1;
+            max-width: 1100px;
+            width: 90%;
+            margin: -40px auto 60px auto; /* Sovrappone leggermente l'header */
+            padding: 0 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Project Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 74, 153, 0.12);
+            border-color: var(--primary);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .card-body h2 {
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .card-body p {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .btn-visit {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover .btn-visit {
+            border-color: var(--primary);
+        }
+
+        /* Placeholder Card */
+        .card.coming-soon {
+            border: 2px dashed #cbd5e1;
+            background: transparent;
+            box-shadow: none;
+            cursor: default;
+            justify-content: center;
+            align-items: center;
+            min-height: 350px;
+        }
+
+        .coming-soon h2 { color: #94a3b8; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            header { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-content">
+            <h1>Giovanni Caruso</h1>
+            <p class="tagline">Creatività, Risorse Digitali e Soluzioni per l'Assistenza Tecnica.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="project-grid">
+            
+            <a href="https://giocaruso.github.io/officina-at/" class="card">
+                <div class="card-img">
+                    <img src="https://giocaruso.github.io/officina-at/img/assistente-tecnico.jpg" alt="Officina AT">
+                </div>
+                <div class="card-body">
+                    <h2>Officina dell'Assistente Tecnico</h2>
+                    <p>Il portale operativo dedicato agli AT di informatica (Area AR02). Simulatori di quiz, guide per graduatorie e strumenti per il laboratorio scolastico.</p>
+                    <span class="btn-visit">Esplora il progetto &rarr;</span>
+                </div>
+            </a>
+
+            <div class="card coming-soon">
+                <div class="card-body" style="text-align: center;">
+                    <span style="font-size: 3rem; display: block; margin-bottom: 10px;">🚀</span>
+                    <h2>Nuovo progetto in arrivo</h2>
+                    <p>Storie di invenzioni e creatività con pochi fondi.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Giovanni Caruso. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
