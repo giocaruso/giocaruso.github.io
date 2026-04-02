@@ -3,44 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovanni Caruso | Progetti e Risorse per l'Assistenza Tecnica</title>
-    <meta name="description" content="Sito ufficiale di Giovanni Caruso. Risorse didattiche, simulatori quiz e strumenti operativi per Assistenti Tecnici delle scuole.">
-    <link rel="stylesheet" href="https://giocaruso.github.io/officina-at/style.css">
-    <style>
-        .rich-text { max-width: 800px; margin: 40px auto; text-align: left; padding: 20px; line-height: 1.8; color: #333; }
-        .hero-hub { background: linear-gradient(135deg, #002d5d 0%, #004a99 100%); color: white; padding: 60px 20px; text-align: center; }
+    
+    <title>Officina dell'Assistente Tecnico | Risorse, Quiz e Guide AR02</title>
+    <meta name="description" content="Il portale operativo per gli Assistenti Tecnici ATA (Area AR02) e aspiranti. Simulatori di quiz antincendio e DigComp, guide per le graduatorie 24 mesi e gestione del laboratorio.">
+    <meta name="keywords" content="assistente tecnico, ATA, AR02, quiz ATA, graduatorie 24 mesi, terza fascia ATA, primo soccorso scuola, antincendio scuola">
+    <meta name="author" content="G. Caruso">
+    
+    <link rel="stylesheet" href="style.css">
+    
+   <style>
+        /* FIX DEFINITIVO: Impedisce che bordi e padding allarghino gli elementi */
+        *, *::before, *::after {
+            box-sizing: border-box !important;
+        }
+
+        /* Forza la barra di scorrimento sempre visibile per evitare salti */
+        html {
+            overflow-y: scroll !important;
+        }
+
+        /* Regola per compattare lo spazio del footer e avvicinare il Copyright */
+        footer, #footer-placeholder > div, .footer {
+            padding-top: 15px !important;
+            margin-top: 20px !important;
+        }
+        
+        /* Effetto speciale per i manuali con fix per lo spostamento del testo */
+        .manuale-hover { transition: all 0.3s ease !important; }
+        .manuale-hover:hover { transform: translateY(-4px) !important; box-shadow: 0 10px 25px rgba(0, 74, 153, 0.15) !important; border-left-width: 6px !important; }
+        
+        /* FIX NUOVI: Manina sulle card e padding interno per non far toccare il testo ai bordi */
+        .card {
+            cursor: pointer !important;
+            padding: 30px 25px !important; 
+        }
     </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-92SS78S6QT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'personalization_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'G-92SS78S6QT');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3456622935631817"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <header class="hero-hub">
-        <h1>Giovanni Caruso</h1>
-        <p>Invenzioni, Creatività e Supporto Tecnico per il Mondo Scuola</p>
-    </header>
+    <div id="header-placeholder"></div>
+    
+    <noscript>
+        <div style="padding: 20px; text-align: center; background: #fff3e0; border-bottom: 2px solid #ffcc80;">
+            <h2>Benvenuti nell'Officina per Assistenti Tecnici delle Scuole</h2>
+            <p>Questo portale indipendente offre strumenti pratici per la professione dell'AT di informatica (Area AR02). Troverai simulatori per i quiz della sicurezza sul lavoro, test sul DigComp 2.2 e guide complete.</p>
+        </div>
+    </noscript>
 
-    <main class="container">
-        <article class="rich-text">
-            <h2>Soluzioni Digitali per l'Area AR02</h2>
-            <p>Benvenuti nel mio spazio digitale. Questo portale nasce con l'obiettivo di centralizzare le mie invenzioni e i progetti dedicati al miglioramento dell'efficienza nei laboratori scolastici. Come appassionato di creatività applicata alla tecnica, ho sviluppato una serie di strumenti che rispondono alle esigenze quotidiane degli <strong>Assistenti Tecnici ATA</strong>.</p>
+    <div class="container">
+        
+        <div id="home-hub">
             
-            <p>Il mio progetto principale, l'<strong>Officina dell'Assistente Tecnico</strong>, è una piattaforma dinamica che offre simulatori per i quiz della sicurezza scolastica, guide sulla ricostruzione di carriera e approfondimenti sulle certificazioni informatiche come il DigComp 2.2. Credo fermamente che l'innovazione non richieda sempre grandi fondi, ma grandi idee e la capacità di ottimizzare le risorse esistenti.</p>
+            <header class="hero" style="margin-bottom: 30px;">
+                <div class="hero-container">
+                    <a onclick="caricaPagina('pagine/chi-sono.html')" title="Scopri chi sono" style="cursor: pointer;">
+                        <img src="img/assistente-tecnico.jpg" alt="Avatar Tecnico Esperto" class="hero-img">
+                    </a>
+                    <div style="flex:1; text-align: left;">
+                        <h1 style="margin-top: 0;">Ciao! Benvenuto nell'<span style="color: #f2ff00;">Officina dell'AT</span></h1>
+                        <p style="margin-bottom: 10px;">Sono un tecnico informatico delle scuole superiori. Questo è il mio spazio, creato riga dopo riga, per chi vuole scoprire questa professione e per i colleghi che cercano appunti operativi, test di preparazione e utility da chiavetta per laboratori scolastici.</p>
+                        <div class="live-update-badge" title="Sistema in continuo aggiornamento">
+                            <span class="pulse-dot"></span>
+                            <span>Aggiornamento 03/2026: Inserito Quiz Antincendio Livello 2</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-            <div class="grid" style="margin: 40px 0;">
-                <a href="https://giocaruso.github.io/officina-at/" class="card" style="text-decoration: none;">
-                    <img src="https://giocaruso.github.io/officina-at/img/assistente-tecnico.jpg" alt="Officina AT" style="width:100%; border-radius: 10px;">
-                    <h3>Entra nell'Officina</h3>
-                    <p>Accedi a simulatori, manuali e guide operative per AT.</p>
-                </a>
+            <div class="category-section" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; line-height: 1.8; margin-bottom: 50px; border-left: 6px solid var(--primary);">
+                <h2 style="color: var(--secondary); margin-top: 0; font-size: 1.8rem; text-align: left; border: none; padding-bottom: 0;">L'Assistente Tecnico (Area AR02): Guida alla Professione</h2>
+                <p>La figura dell'Assistente Tecnico (appartenente all'Area AR02 per l'informatica) è un pilastro fondamentale all'interno delle scuole secondarie italiane. Spesso chi si avvicina a questo mestiere per la prima volta, iscrivendosi nelle graduatorie ATA di terza fascia o puntando all'inserimento in quelle dei 24 mesi, si scontra con una forte mancanza di informazioni pratiche sul lavoro quotidiano. Cosa si fa esattamente all'interno di un laboratorio scolastico? Come si gestiscono gli inventari, la manutenzione delle reti e i rapporti con i docenti tecnico-pratici (ITP)? Quali sono le normative vigenti in materia di sicurezza?</p>
+                <p>Questo portale indipendente nasce proprio per colmare questo vuoto informativo. Ho costruito l'Officina dell'AT con l'obiettivo di offrire un vero e proprio hub operativo, ricco di contenuti testuali, guide e manuali, pensato sia per chi deve affrontare il primo incarico in assoluto, sia per i colleghi già di ruolo che cercano aggiornamenti normativi o soluzioni tecniche rapide. Non si tratta semplicemente di un contenitore di link, ma di un manuale digitale in continua evoluzione, scritto sul campo.</p>
+                
+                <h3 style="color: var(--primary); font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px;">Dalla Sicurezza al DigComp: La Preparazione del Personale ATA</h3>
+                <p>Un aspetto sempre più cruciale della nostra professione è la formazione continua e certificata. All'interno del sito ho sviluppato e messo a disposizione dei simulatori didattici specifici per i quiz sulla sicurezza sul lavoro (inclusi i test di aggiornamento per addetti antincendio e primo soccorso aziendale) e per la certificazione internazionale delle competenze digitali DigComp 2.2. Queste risorse permettono di misurare oggettivamente la propria preparazione in vista di concorsi pubblici o dell'assegnazione delle posizioni economiche ATA.</p>
+                
+                <h3 style="color: var(--primary); font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px;">Avanzamento di Carriera e Gestione del Laboratorio</h3>
+                <p>Oltre alla gestione puramente informatica, l'Officina affronta approfonditamente i temi caldi della burocrazia scolastica. Attraverso le nostre guide testuali esploriamo i complessi meccanismi della ricostruzione di carriera, le differenze contrattuali tra i vari profili del personale ATA e i compiti specifici (e i limiti) assegnati all'Assistente Tecnico durante l'orario di servizio. L'obiettivo primario è fornire una bussola chiara in un mare di circolari ministeriali, aiutando il tecnico a svolgere le proprie mansioni con la massima consapevolezza, tutelando i propri diritti e garantendo l'efficienza dei laboratori per gli studenti.</p>
+            </div>
+            <div class="category-section">
+                <h2>Strumenti Operativi</h2>
+                <p class="subtitle">Utilità e aggiornamenti per il lavoro quotidiano.</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px; max-width: 800px; margin: 0 auto;">
+                    
+                    <div class="pannello-operativo" style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 2px solid var(--primary); display: flex; align-items: center; gap: 20px; cursor: pointer;" onclick="caricaPagina('pagine/area-test.html')">
+                        <span style="font-size: 2.8rem;">💻</span>
+                        <div style="text-align: left;">
+                            <h3 style="margin: 0 0 5px 0; color: var(--secondary); font-size: 1.3rem;">Area test e simulatori</h3>
+                            <p style="margin: 0; color: #555; font-size: 0.95rem;">Misura le tue conoscenze pratiche di informatica per lavorare a scuola. Preparati ad esami specifici come quello per <span style="color: #ff0000;">DigComp 2.2</span>, addetto antincendio e tanti altri.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pannello-operativo" style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 3px solid #ffc400; display: flex; align-items: center; gap: 20px; cursor: pointer;" onclick="caricaPagina('pagine/newsletter.html')">
+                        <span style="font-size: 2.8rem;">📢</span>
+                        <div style="text-align: left;">
+                            <h3 style="margin: 0 0 5px 0; color: var(--secondary); font-size: 1.3rem;">Resta Aggiornato</h3>
+                            <p style="margin: 0; color: #555; font-size: 0.95rem;">Risorse pratiche per chi lavora a scuola. Ricevi in anteprima i nuovi simulatori e le utility digitali pensate per semplificare la vita in laboratorio, in cattedra o in segreteria.</p>
+                        </div>
+                    </div>
+                    
+                    </div>
             </div>
 
-            <h3>La mia Visione: Creatività e Metodo</h3>
-            <p>Oltre alla gestione tecnica, mi occupo della scrittura di manuali pratici. I miei libri sono pensati per chi vuole intraprendere la carriera di AT, offrendo un supporto concreto per superare le prove selettive e gestire con competenza i laboratori di informatica. In questo sito troverete aggiornamenti costanti sulle normative scolastiche e utility digitali sviluppate per semplificare il lavoro in cattedra e in segreteria.</p>
-        </article>
-    </main>
+            <div class="category-section category-alt" style="background: #eef2f7; border: 2px solid #dce4ed; padding: 45px 20px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 45, 93, 0.06); margin-top: 50px;">
+                <h2>🧑‍🔧La Professione</h2>
+                <p class="subtitle">Tutto quello che c'è da sapere per iniziare e crescere come Assistente Tecnico di Laboratorio.</p>
+                <div class="grid">
+                    <div class="card" onclick="caricaPagina('pagine/come-diventare-at.html')">
+                        <span style="font-size:2.5rem;">🎓</span>
+                        <h3>Come si diventa tecnico</h3>
+                        <p>Requisiti, titoli di studio e accesso alle graduatorie ATA (24 mesi e terza fascia).</p>
+                    </div>
+                    <div class="card" onclick="caricaPagina('pagine/cosa-fa-un-tecnico.html')">
+                        <span style="font-size:2.5rem;">⚙️</span>
+                        <h3>Cosa fa un tecnico</h3>
+                        <p>Mansioni, orari, responsabilità e gestione quotidiana dei laboratori.</p>
+                    </div>
+                    <div class="card" onclick="caricaPagina('pagine/avanzamento-carriera.html')">
+                        <span style="font-size:2.5rem;">📈</span>
+                        <h3>Avanzamento di carriera</h3>
+                        <p>Posizioni economiche, passaggi di profilo e ricostruzione di carriera.</p>
+                    </div>
+                    <div class="card" onclick="caricaPagina('pagine/link-utili.html')">
+                        <span style="font-size:2.5rem;">🌐</span>
+                        <h3>Link e Portali Utili</h3>
+                        <p>Le risorse di riferimento: siti ministeriali, normative e portali per l'aggiornamento ATA.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="sezione-appunti">
+            <div class="category-section" style="background: #f0f8ff; border: 2px solid #4da6ff; padding: 45px 20px; border-radius: 20px; margin-top: 50px; box-shadow: 0 10px 30px rgba(0, 166, 255, 0.08);">
+                <h2 style="color: var(--secondary); margin-top: 0; font-size: 2.2rem;">📒 I Miei Appunti</h2>
+                <p style="font-size: 1.1rem; color: #444; max-width: 950px; margin: 0 auto 35px auto; line-height: 1.6;">
+                    Oltre a questa Officina digitale, ho deciso di mettere la mia esperienza su carta. Ho scritto questi libri per raccogliere i miei appunti quotidiani, le soluzioni ai problemi tecnici più comuni in laboratorio e le esercitazioni per superare i test. In fondo, è il materiale che avrei voluto avere io tra le mani il mio primo giorno di scuola.
+                </p>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto;">
+                    
+                    <div class="manuale-hover" onclick="window.open('https://amzn.eu/d/005dvtg0', '_blank')" title="Scoprilo su Amazon" style="background: white; border-radius: 12px; padding: 25px; border-left: 6px solid #80c4ff; border-top: 1px solid #e0f0ff; border-right: 1px solid #e0f0ff; border-bottom: 1px solid #e0f0ff; display: flex; align-items: center; gap: 25px; cursor: pointer; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                        <img src="img/copertina-oltre-profilo.jpg" alt="Diario di un AT" style="width: 85px; height: auto; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                        <div>
+                            <h3 style="margin: 0 0 8px 0; color: var(--secondary); font-size: 1.3rem;">Diario di un AT di laboratorio delle scuole superiori</h3>
+                            <p style="margin: 0; color: #555; font-size: 0.95rem; line-height: 1.5;">Il lavoro del tecnico raccontato in prima persona, tra emergenze informatiche e burocrazia. Seguimi durante le mie giornate di lavoro e le strategie per puntare all'avanzamento economico.</p>
+                        </div>
+                    </div>
 
-    <footer class="footer" style="padding: 20px;">
-        <p>&copy; 2026 Giovanni Caruso - Creatore dell'Officina AT</p>
-    </footer>
+                    <div class="manuale-hover" onclick="window.open('https://amzn.eu/d/03SaaHGU', '_blank')" title="Scoprilo su Amazon" style="background: white; border-radius: 12px; padding: 25px; border-left: 6px solid #80c4ff; border-top: 1px solid #e0f0ff; border-right: 1px solid #e0f0ff; border-bottom: 1px solid #e0f0ff; display: flex; align-items: center; gap: 25px; cursor: pointer; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                        <img src="img/copertina-tutti-possono.jpg" alt="Tutti possono fare l'AT" style="width: 85px; height: auto; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                        <div>
+                            <h3 style="margin: 0 0 8px 0; color: var(--secondary); font-size: 1.3rem;">Tutti possono fare l'Assistente Tecnico</h3>
+                            <p style="margin: 0; color: #555; font-size: 0.95rem; line-height: 1.5;">Per tutti coloro che vogliono iscriversi nelle graduatorie come tecnico di laboratorio informatico e hanno timore di non esserne all'altezza una volta chiamati. Un manuale sulle richieste tipo che incontrerete durante il vostro lavoro.</p>
+                        </div>
+                    </div>
 
+                    <div class="manuale-hover" onclick="window.open('https://amzn.eu/d/0iFVNuCY', '_blank')" title="Scoprilo su Amazon" style="background: white; border-radius: 12px; padding: 25px; border-left: 6px solid #80c4ff; border-top: 1px solid #e0f0ff; border-right: 1px solid #e0f0ff; border-bottom: 1px solid #e0f0ff; display: flex; align-items: center; gap: 25px; cursor: pointer; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                        <img src="img/copertina-200quiz.jpg" alt="Quiz dell' AT" style="width: 85px; height: auto; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                        <div>
+                            <h3 style="margin: 0 0 8px 0; color: var(--secondary); font-size: 1.3rem;">Quiz dell' Assistente tecnico delle scuole</h3>
+                            <p style="margin: 0; color: #555; font-size: 0.95rem; line-height: 1.5;">Manuale di preparazione alla professione e all'esame per le posizioni economiche ATA. Quiz su IA, Digicomp 2.2, gestione documentale, normativa, sicurezza (D.Lgs. 81/08), informatica, reti, casi pratici di laboratorio e aule, differenze tra posizioni economiche.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+        <div id="contenuto-pagina"></div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <div style="margin: 20px auto 40px auto; text-align: center; max-width: 1200px; padding: 0 20px;">
+        <p style="font-size: 0.8rem; color: #777; margin-bottom: 15px; font-style: italic;">
+            Pausa pubblicitaria che mi consente di mantenere la mia officina aperta.
+        </p>
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3456622935631817"
+             data-ad-slot="8658508859"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+<div style="margin-top: 25px; opacity: 1; font-family: 'Courier New', Courier, monospace; font-size: 0.9rem; color: #ffffff; background-color: var(--secondary); display: inline-block; padding: 4px 12px; border: 1px solid rgba(255, 255, 255, 0.2);white-space: nowrap !important;">
+    Accessi: <strong>103</strong> | Last Update: 02/04/2026
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
