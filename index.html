@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanni Caruso | Soluzioni e Risorse per l'Assistenza Tecnica</title>
     <meta name="description" content="Il portale ufficiale di Giovanni Caruso. Risorse didattiche, simulatori, manuali e strumenti operativi per Assistenti Tecnici delle scuole.">
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-92SS78S6QT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-92SS78S6QT');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Blocco dei cookie in attesa del consenso (Punto 4)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'personalization_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'G-92SS78S6QT');
+    </script>
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3456622935631817"
      crossorigin="anonymous"></script>
+     
     <style>
         /* STILE INDIPENDENTE E PULITO PER L'HUB */
         :root {
@@ -32,7 +46,6 @@
             line-height: 1.7;
         }
 
-        /* Hero Section */
         .hero-hub {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
             color: white;
@@ -44,14 +57,12 @@
         .hero-hub h1 { font-size: 2.8rem; margin-bottom: 15px; letter-spacing: -1px; }
         .hero-hub p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
 
-        /* Contenitore Principale */
         .container {
             max-width: 900px;
             margin: 50px auto;
             padding: 0 25px;
         }
 
-        /* Sezioni Testuali per AdSense */
         .content-section {
             background: white;
             padding: 40px;
@@ -71,7 +82,6 @@
 
         .content-section p { margin-bottom: 20px; font-size: 1.05rem; }
 
-        /* Il Bottone per l'Officina */
         .action-card {
             background: linear-gradient(to right, #f0f7ff, #ffffff);
             border: 2px solid var(--primary);
@@ -99,7 +109,6 @@
         }
         .btn-officina:hover { background-color: var(--secondary); }
 
-        /* Footer */
         .footer {
             background-color: var(--secondary);
             color: white;
@@ -108,6 +117,7 @@
             margin-top: 60px;
         }
         .footer a { color: #00d4ff; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -140,13 +150,13 @@
     </main>
 
     <footer class="footer">
-        <p style="margin-bottom: 15px;">&copy; 2026 Giovanni Caruso - Creatore dell'Officina AT</p>
-        <div>
-            <a href="#">Privacy Policy</a> | 
-            <a href="#">Cookie Policy</a> | 
-            <a href="#">Contatti</a>
-        </div>
-    </footer>
+    <p>&copy; 2026 Giovanni Caruso</p>
+    <div>
+        <a href="https://giocaruso.github.io/officina-at/">Visita l'Officina</a> | 
+        <a href="https://giocaruso.github.io/officina-at/pagine/chi-sono.html">Chi Sono</a> | 
+        <a href="https://giocaruso.github.io/officina-at/?pagina=pagine/privacy.html">Privacy Policy</a>
+    </div>
+</footer>
 
 </body>
 </html>
