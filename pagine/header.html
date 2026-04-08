@@ -1,0 +1,91 @@
+<style>
+    /* Stile della barra fissata in alto */
+    .header-officina {
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--primary);
+    }
+    
+    /* Titolo/Logo a sinistra */
+    .header-logo {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: var(--secondary);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Contenitore dei bottoni */
+    .header-nav {
+        display: flex;
+        gap: 10px;
+    }
+
+    /* Stile dei singoli bottoni del menù */
+    .header-btn {
+        background: transparent;
+        border: none;
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .header-btn:hover {
+        background-color: #f4f7fa;
+    }
+
+    /* MAGIA PER SMARTPHONE: Il menù si adatta da solo */
+    @media (max-width: 768px) {
+        .header-officina {
+            flex-direction: column;
+            padding: 10px;
+            gap: 15px;
+        }
+        .header-nav {
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .header-btn {
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            background-color: #f4f7fa; /* Li rende ben visibili su touch */
+            border: 1px solid #e9ecef;
+        }
+    }
+</style>
+
+<div class="header-officina">
+    <div class="header-logo" onclick="tornaAllHub()">
+        ⚙️ Officina AT
+    </div>
+    
+    <nav class="header-nav">
+        <button class="header-btn" onclick="tornaAllHub()">Officina</button>
+        <button class="header-btn" onclick="caricaPagina('pagine/area-test.html')">Area Test</button>
+        <button class="header-btn" onclick="caricaPagina('pagine/come-diventare-at.html')">Professione</button>
+        <button class="header-btn" onclick="vaiAgliAppunti()">Appunti</button>
+    </nav>
+</div>
+
+
+
+
+
+
+
+</header>

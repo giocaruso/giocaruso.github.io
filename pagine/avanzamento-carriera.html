@@ -1,0 +1,111 @@
+<style>
+    /* Regole per effetti hover fluidi e dolci */
+    .btn-speciale { transition: all 0.3s ease !important; }
+    .btn-speciale:hover { transform: translateY(-4px) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; filter: brightness(1.15) !important; }
+    
+    .card-hover { transition: all 0.3s ease !important; }
+    .card-hover:hover { transform: translateY(-4px) !important; box-shadow: 0 10px 25px rgba(0, 74, 153, 0.15) !important; background-color: #f0f7ff !important; border-color: var(--primary) !important; }
+</style>
+
+<div class="section" style="display: block;">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <button id="btn-ritorno-dinamico" onclick="gestisciRitorno()" class="btn-back-hub" style="margin: 0;">
+            ← Indietro
+        </button>
+        <button onclick="tornaAllHub()" class="btn-back-hub" style="margin: 0; background-color: var(--primary); color: white; border-color: var(--primary);">
+            🏠 Officina
+        </button>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="color: var(--secondary); text-align: center; margin-bottom: 20px; font-size: 2.2rem;">L'Avanzamento di Carriera</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #555; text-align: center; margin-bottom: 40px;">
+            Dalla ricostruzione degli anni di precariato fino all'acquisizione di nuove posizioni economiche: come si cresce nel profilo ATA.
+        </p>
+
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;">
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/come-diventare-at.html')">
+                Come si diventa AT
+            </button>
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color:  #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/cosa-fa-un-tecnico.html')">
+                Cosa fa un tecnico
+            </button>
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: var(--primary); color: white; border: 2px solid var(--primary);" onclick="caricaPagina('pagine/avanzamento-carriera.html')">
+                Carriera
+            </button>
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/link-utili.html')">
+                Link utili
+            </button>
+        </div>
+
+        <div style="background: var(--bg); padding: 30px; border-radius: 12px; margin-bottom: 30px; border-left: 5px solid var(--primary);">
+            <h3 style="color: var(--secondary); margin-top: 0; margin-bottom: 20px; font-size: 1.5rem;">⏳ Ricostruzione di Carriera</h3>
+            
+            <h4 style="color: var(--primary); margin-bottom: 5px; font-size: 1.2rem;">Cos'è e quando si fa?</h4>
+            <p style="margin-top: 0; margin-bottom: 15px;">Quando finalmente si entra in ruolo (contratto a tempo indeterminato) e si supera l'anno di prova, scatta il momento della "Ricostruzione di Carriera". È la procedura burocratica con cui la scuola calcola tutti gli anni in cui hai lavorato come supplente (il precariato) e te li riconosce ufficialmente.</p>
+            
+            <h4 style="color: var(--primary); margin-bottom: 5px; font-size: 1.2rem;">Come incide sullo stipendio?</h4>
+            <p style="margin-top: 0; margin-bottom: 0;">Riconoscendo il tuo servizio passato, vieni inserito nel corretto "gradone" di anzianità (gli scatti stipendiali avvengono per fasce d'età lavorativa: 0-8 anni, 9-14, 15-20, ecc.). Questo si traduce in un adeguamento dello stipendio mensile e, spesso, nell'erogazione degli arretrati maturati.</p>
+        </div>
+
+        <div style="background: var(--bg); padding: 30px; border-radius: 12px; margin-bottom: 30px; border-left: 5px solid #4ce0b3;">
+            <h3 style="color: var(--secondary); margin-top: 0; margin-bottom: 20px; font-size: 1.5rem;">📈 Posizioni Economiche e Passaggi</h3>
+            
+            <h4 style="color: var(--primary); margin-bottom: 5px; font-size: 1.2rem;">Cosa sono le Posizioni Economiche?</h4>
+            <p style="margin-top: 0; margin-bottom: 15px;">Non si rimane sempre allo stesso livello. Il Ministero attiva periodicamente delle procedure per assegnare la <strong>Prima e Seconda Posizione Economica</strong>. Sono veri e propri scatti di stipendio permanenti che si ottengono frequentando un corso di formazione e superando un test finale. In cambio di questo aumento, l'AT si assume compiti di maggiore responsabilità (es. coordinamento di altri tecnici o gestione più complessa dei beni).</p>
+
+            <h4 style="color: var(--primary); margin-bottom: 5px; font-size: 1.2rem;">Si può cambiare del tutto profilo?</h4>
+            <p style="margin-top: 0; margin-bottom: 0;">Assolutamente sì. Tramite la cosiddetta mobilità professionale (o passaggi verticali), un Assistente Tecnico che possiede i titoli di studio necessari può chiedere il passaggio al profilo di Docente Tecnico Pratico (ITP) oppure, maturando l'esperienza richiesta, può puntare al ruolo di DSGA (Direttore dei Servizi Generali e Amministrativi) o fare da "Facente Funzione".</p>
+        </div>
+
+        <div style="background: white; border: 2px solid var(--primary); padding: 35px; border-radius: 20px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <h3 style="color: var(--secondary); margin-top: 0; text-align: center; font-size: 1.6rem;">Come prepararsi al salto di qualità?</h3>
+            <p style="text-align: center; font-size: 1.05rem; color: #444; margin-bottom: 30px; line-height: 1.6;">
+                Quando ho iniziato, cercare informazioni chiare su come crescere in questa professione era un'impresa. Spesso ci si chiede come affrontare i test per le Posizioni Economiche o come gestire i casi pratici in laboratorio. Per questo ho deciso di mettere a disposizione i miei appunti: per aiutarvi ad andare oltre il semplice profilo.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                
+                <div class="card-hover" style="background: #fafcff; border-radius: 12px; padding: 20px; text-align: center; border: 1px solid #e3ecf5; cursor: pointer;" onclick="window.open('https://amzn.eu/d/005dvtg0', '_blank')" title="Scoprilo su Amazon">
+                    <img src="img/copertina-oltre-profilo.jpg" alt="Diario di un AT" style="width: 120px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 8px 0; color: var(--primary); font-size: 1.1rem;">Diario di un AT</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #555; line-height: 1.4;">Casi pratici e vita da tecnico di laboratorio per puntare agli scatti economici.</p>
+                </div>
+
+                <div class="card-hover" style="background: #fafcff; border-radius: 12px; padding: 20px; text-align: center; border: 1px solid #e3ecf5; cursor: pointer;" onclick="window.open('https://amzn.eu/d/0iFVNuCY', '_blank')" title="Scoprilo su Amazon">
+                    <img src="img/copertina-200quiz.jpg" alt="Quiz 200" style="width: 120px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 8px 0; color: var(--primary); font-size: 1.1rem;">Quiz dell' AT</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #555; line-height: 1.4;">Eserciziari mirati per misurare il livello di competenza professionale.</p>
+                </div>
+
+                <div class="card-hover" style="background: #fafcff; border-radius: 12px; padding: 20px; text-align: center; border: 1px solid #e3ecf5; cursor: pointer;" onclick="window.open('https://amzn.eu/d/03SaaHGU', '_blank')" title="Scoprilo su Amazon">
+                    <img src="img/copertina-tutti-possono.jpg" alt="Tutti possono fare l'AT" style="width: 120px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 8px 0; color: var(--primary); font-size: 1.1rem;">Tutti possono farlo</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #555; line-height: 1.4;">Casi pratici scolastici, perchè fare il tecnico di laboratorio è alla portata di tutti.</p>
+                </div>
+
+            </div>
+        </div>
+        
+        <div style="margin-top: 25px; padding: 15px 20px; background-color: #f4f7fa; border-radius: 12px; margin-bottom: 30px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; font-size: 0.95rem; border: 1px solid #e9ecef;">
+            <p style="color: var(--secondary); font-weight: bold; margin: 0;">Resta aggiornato sulle novità dell'Officina AT:</p>
+            <button class="btn btn-speciale" style="display: inline-flex; align-items: center; gap: 6px; width: auto; padding: 6px 15px; font-size: 0.9rem; background-color: white; color: var(--primary); border: 2px solid var(--primary); margin: 0; box-shadow: none;" onclick="caricaPagina('pagine/newsletter.html')">📩 Newsletter</button>
+        </div>
+        
+        <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.95rem; background-color: var(--secondary); border: none; color: white;" onclick="caricaPagina('pagine/cosa-fa-un-tecnico.html')">← Cosa fa un tecnico</button>
+            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.95rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="tornaAllHub()">🏠 Torna all'Officina</button>
+            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.95rem; background-color: var(--primary); color: white; border: 2px solid var(--primary);" onclick="caricaPagina('pagine/link-utili.html')">Link Utili →</button>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const btnRitorno = document.getElementById('btn-ritorno-dinamico');
+    if (btnRitorno && sessionStorage.getItem('paginaPrecedente')) {
+        btnRitorno.innerHTML = "← Torna all'articolo";
+    }
+});
+</script>

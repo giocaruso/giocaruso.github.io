@@ -1,0 +1,113 @@
+<style>
+    /* Regola specifica per l'effetto hover dolce sul bottone newsletter */
+    .btn-speciale { transition: all 0.3s ease !important; }
+    .btn-speciale:hover { transform: translateY(-4px) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; filter: brightness(1.15) !important; }
+</style>
+
+<div class="section" style="display: block;">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <button id="btn-ritorno-dinamico" onclick="gestisciRitorno()" class="btn-back-hub" style="margin: 0;">
+            ← Indietro
+        </button>
+        <button onclick="tornaAllHub()" class="btn-back-hub" style="margin: 0; background-color: var(--primary); color: white; border-color: var(--primary);">
+            🏠 Officina
+        </button>
+    </div>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="color: var(--secondary); text-align: center; margin-bottom: 20px; font-size: 2.2rem;">Come si diventa Assistente Tecnico</h2>
+         <p style="font-size: 1.1rem; line-height: 1.6; color: #555; text-align: center; margin-bottom: 40px;">
+            Una guida chiara e senza fronzoli per capire i requisiti e come funziona il sistema di reclutamento nelle scuole pubbliche.
+        </p>
+        
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;">
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: var(--primary); color: white; border: 2px solid var(--primary);" onclick="caricaPagina('pagine/come-diventare-at.html')">
+                Come si diventa AT
+            </button>
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/cosa-fa-un-tecnico.html')">
+                Cosa fa un tecnico
+            </button>
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/avanzamento-carriera.html')">
+                Carriera
+            </button>
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/link-utili.html')">
+                Link utili
+            </button>
+        </div>
+
+        <div style="background: var(--bg); padding: 30px; border-radius: 12px; margin-bottom: 30px; border-left: 5px solid var(--primary);">
+            <h3 style="color: var(--secondary); margin-top: 0; margin-bottom: 25px; font-size: 1.5rem;">1. Il Diploma (Il lasciapassare)</h3>
+            
+            <h4 style="color: var(--primary); margin-bottom: 5px; font-size: 1.2rem;">Quale titolo occorre per diventare tecnico di laboratorio a scuola?</h4>
+            <p style="margin-top: 0;">A differenza di altri profili ATA (come il collaboratore scolastico o l'assistente amministrativo), per fare l'Assistente Tecnico non basta un diploma di maturità qualsiasi. Serve un <strong>diploma tecnico o professionale specifico</strong> che dia accesso a una determinata "Area di Laboratorio".</p>
+            <p>Per il laboratorio di informatica (la famosa <strong>Area AR02</strong>), i diplomi tipici sono:</p>
+            <ul>
+                <li style="margin-bottom: 5px;">Perito Informatico, Elettronico o Telecomunicazioni</li>
+                <li style="margin-bottom: 5px;">Tecnico delle Industrie Elettroniche o Elettriche</li>
+            </ul>
+            
+            <h4 style="color: var(--primary); margin-top: 25px; margin-bottom: 5px; font-size: 1.2rem;">Come verifico se il mio diploma conferisce l'accesso?</h4>
+            <div style="background: #e3ecf5; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                <p style="margin: 0; font-size: 0.95rem;"><strong>📌 L'Allegato C (Tabella di corrispondenza):</strong> Il Ministero pubblica una tabella ufficiale che associa ogni singolo titolo di studio alle aree di laboratorio. Puoi verificare in autonomia la validità del tuo diploma utilizzando l'<a href="https://www.istruzione.it/graduatoriedistituto_ata/personale_assistente_tecnico_allegato_c.shtml" target="_blank" style="color: var(--primary); font-weight: bold;">Applicazione ufficiale Allegato C</a>.</p>
+            </div>
+
+            <h4 style="color: var(--primary); margin-top: 25px; margin-bottom: 5px; font-size: 1.2rem;">È sufficiente possedere solo il diploma?</h4>
+            <p style="margin-top: 0; margin-bottom: 15px;"><strong>⚠️ No, c'è una grande novità:</strong> Per i nuovi inserimenti in graduatoria, oggi il diploma da solo non basta più. È diventato obbligatorio possedere anche la <strong>Certificazione Internazionale di Alfabetizzazione Digitale (CIAD)</strong>.</p>
+            
+            <p style="margin-bottom: 5px;">Attenzione però: non è sufficiente un "corso base" di informatica qualsiasi. Per essere valida come CIAD ai fini delle graduatorie ATA, la certificazione <strong>deve avere tre caratteristiche obbligatorie</strong>:</p>
+            <ul style="line-height: 1.6; margin-top: 5px; margin-bottom: 15px;">
+                <li style="margin-bottom: 5px;">Deve essere rilasciata da un ente accreditato ad <strong>Accredia</strong>.</li>
+                <li style="margin-bottom: 5px;">Deve essere registrata e riportare esplicitamente il <strong>bollino/marchio Accredia</strong> sul certificato.</li>
+                <li style="margin-bottom: 5px;">Deve essere allineata ai framework europei per le competenze digitali (come il DigComp 2.2).</li>
+            </ul>
+
+            <div style="background: #fff3e0; padding: 15px; border-radius: 8px; border: 1px solid #ffcc80; margin-bottom: 20px;">
+                <p style="margin: 0; font-size: 0.95rem;"><strong>💡 Quali sono le più usate?</strong> Le due certificazioni più comuni (rilasciate da due enti concorrenti ma ugualmente valide) sono <strong>EIPASS 7 Moduli Standard</strong> (di Certipass) e <strong>ICDL Full Standard</strong> (di AICA). L'importante, quando ci si iscrive, è assicurarsi di richiedere il percorso "Standard" che preveda il rilascio del certificato con bollino Accredia.</p>
+            </div>
+
+            <h4 style="color: var(--primary); margin-top: 25px; margin-bottom: 5px; font-size: 1.2rem;">Che differenza c'è tra la CIAD e le altre certificazioni informatiche?</h4>
+            <p style="margin-top: 0; margin-bottom: 10px;">È fondamentale fare questa distinzione per non commettere errori durante la domanda:</p>
+            <ul style="line-height: 1.6; margin-top: 5px; margin-bottom: 0;">
+                <li style="margin-bottom: 10px;">🔴 <strong>La CIAD: È il biglietto d'ingresso (Requisito di Accesso).</strong> Senza di questa (abbinata al diploma), la tua domanda viene scartata. <em>Non serve ad aumentare il tuo punteggio</em>, serve esclusivamente per avere il diritto di entrare in graduatoria.</li>
+                <li style="margin-bottom: 5px;">🟢 <strong>Le altre certificazioni (es. Dattilografia, certificazioni informatiche non accreditate): Sono punti extra (Titoli Valutabili).</strong> Non ti permettono di accedere alla graduatoria, ma se sei già dentro (perché possiedi Diploma + CIAD), ti regalano punteggio aggiuntivo per scavalcare gli altri candidati.</li>
+            </ul>
+        </div>
+
+        <div style="background: var(--bg); padding: 30px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #4ce0b3;">
+            <h3 style="color: var(--secondary); margin-top: 0; margin-bottom: 25px; font-size: 1.5rem;">2. Le Graduatorie (Come si entra a lavorare)</h3>
+            <p style="margin-top: 0;">Nelle scuole pubbliche non si invia il curriculum direttamente in segreteria per farsi assumere. Il reclutamento avviene iscrivendosi in apposite graduatorie provinciali, scegliendo una sola provincia in tutta Italia.</p>
+            <p>Il percorso si divide in due step principali:</p>
+            
+            <h4 style="color: var(--primary); margin-bottom: 5px; font-size: 1.2rem;">A) La Terza Fascia (Il punto di partenza)</h4>
+            <p style="margin-top: 0; margin-bottom: 20px;">Si aggiorna solitamente ogni 3 anni. Chiunque abbia il diploma corretto e la certificazione CIAD può iscriversi. Da questa graduatoria le scuole attingono per chiamare i tecnici per le <strong>supplenze</strong> (che possono essere sostituzioni brevi di qualche settimana, oppure contratti che arrivano fino al 30 giugno o 31 agosto).</p>
+
+            <h4 style="color: var(--primary); margin-bottom: 5px; font-size: 1.2rem;">B) La Prima Fascia / Graduatoria "24 Mesi" (La stabilità)</h4>
+            <p style="margin-top: 0;">È il traguardo. Dopo aver lavorato e accumulato <strong>23 mesi e 16 giorni di servizio</strong> statale come Assistente Tecnico (anche in anni diversi e in scuole diverse), acquisisci il diritto di iscriverti alla Graduatoria Permanente. Questa si aggiorna ogni anno: trovarsi qui significa avere la priorità assoluta per i contratti annuali e, infine, essere chiamati per l'immissione in <strong>ruolo (il contratto a tempo indeterminato)</strong>.</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <p style="font-size: 0.95rem; color: #666;">🔗 <em>Link utile: Per approfondimenti normativi, visita la <a href="https://www.miur.gov.it/web/guest/personale-ata" target="_blank" style="color: var(--primary); text-decoration: underline;">sezione ufficiale del Personale ATA sul sito del MIM</a>.</em></p>
+        </div>
+
+        <div style="margin-top: 35px; padding: 15px 20px; background-color: #f4f7fa; border-radius: 12px; margin-bottom: 30px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; font-size: 0.95rem; border: 1px solid #e9ecef;">
+            <p style="color: var(--secondary); font-weight: bold; margin: 0;">Resta aggiornato sulle novità dell'Officina AT:</p>
+            <button class="btn btn-speciale" style="display: inline-flex; align-items: center; gap: 6px; width: auto; padding: 6px 15px; font-size: 0.9rem; background-color: white; color: var(--primary); border: 2px solid var(--primary); margin: 0; box-shadow: none;" onclick="caricaPagina('pagine/newsletter.html')">📩 Newsletter</button>
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.95rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="tornaAllHub()">🏠 Torna all'Officina</button>
+            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.95rem; background-color: var(--primary); border: 2px solid var(--primary); color: white;" onclick="caricaPagina('pagine/cosa-fa-un-tecnico.html')">Cosa fa un tecnico →</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// SCRIPT: Cambio del testo del bottone indietro solo se arrivi da un articolo
+document.addEventListener("DOMContentLoaded", function() {
+    const btnRitorno = document.getElementById('btn-ritorno-dinamico');
+    if (btnRitorno && sessionStorage.getItem('paginaPrecedente')) {
+        btnRitorno.innerHTML = "← Torna all'articolo";
+    }
+});
+</script>
