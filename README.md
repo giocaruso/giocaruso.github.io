@@ -1,2 +1,2 @@
-# giocaruso.github.io
-Root repository per giocaruso.github.io - Gestione domini e autorizzazioni
+# quiz-ata
+Piattaforma interattiva di autovalutazione per il profilo Assistente Tecnico (ATA).
