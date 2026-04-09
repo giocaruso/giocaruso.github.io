@@ -64,9 +64,10 @@
 
 <div class="section" style="display: block;">
     <div style="text-align: left; margin-bottom: 20px;">
-        <button onclick="caricaPagina('pagine/area-test.html')" class="btn btn-outline" style="margin: 0; padding: 6px 12px; font-size: 0.9rem;">← Area Test</button>
-    </div>
-    
+    <button onclick="gestisciRitorno()" class="btn btn-outline" style="margin: 0; padding: 1px 12px; font-size: 0.85rem; border-width: 1px; border-radius: 6px; line-height: 0.4;">
+        ← Indietro
+    </button>
+</div>
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
         
         <div style="margin-bottom: 40px;">
@@ -156,11 +157,9 @@
 
             </div> 
         </div> 
-
-        <div style="border-top: 1px solid #eee; padding-top: 30px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; align-items: center;">
-            <button class="btn btn-outline" style="margin: 0; width: auto; min-width: 200px; padding: 12px 15px; font-size: 0.95rem;" onclick="tornaAllHub()">🔧 Torna in Officina</button>
-            <button class="btn btn-outline" onclick="caricaPagina('pagine/newsletter.html')" style="background: none; border: none; color: var(--primary); font-weight: bold; text-decoration: none; cursor: pointer; font-family: inherit; font-size: 1rem;">📩 Iscriviti alla Newsletter</button>
+        <div style="border-top: 2px solid rgba(0, 74, 153, 0.1); padding-top: 10px; margin-top: 5px; margin-bottom: 10px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
+            <button onclick="caricaPagina('pagine/area-test.html')" class="btn btn-outline"style="margin: 0; padding: 12px 25px; font-size: 1rem; line-height: 0.4;">← Area Test</button>
+            <button onclick="tornaAllHub()" class="btn btn-outline" style="margin: 0; padding: 12px 25px; font-size: 1rem; line-height: 0.4;">🔧 Torna in Officina</button>
         </div>
-
     </div>
 </div>

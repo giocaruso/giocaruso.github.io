@@ -6,12 +6,9 @@
 
 <div class="section" style="display: block;">
     
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <button id="btn-ritorno-dinamico" onclick="gestisciRitorno()" class="btn-back-hub" style="margin: 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <button id="btn-ritorno-dinamico" onclick="gestisciRitorno()" class="btn-back-hub" style="margin: 0; line-height: 0.4;">
             ← Indietro
-        </button>
-        <button onclick="tornaAllHub()" class="btn-back-hub" style="margin: 0; background-color: var(--primary); color: white; border-color: var(--primary);">
-            🏠 Officina
         </button>
     </div>
 
@@ -22,16 +19,16 @@
         </p>
 
         <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;">
-            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/come-diventare-at.html')">
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary); line-height: 0.4;" onclick="caricaPagina('pagine/come-diventare-at.html')">
                 Come si diventa AT
             </button>
-            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: var(--primary); color: white; border: 2px solid var(--primary);" onclick="caricaPagina('pagine/cosa-fa-un-tecnico.html')">
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: var(--primary); color: white; border: 2px solid var(--primary); line-height: 0.4;" onclick="caricaPagina('pagine/cosa-fa-un-tecnico.html')">
                 Cosa fa un tecnico
             </button>
-            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/avanzamento-carriera.html')">
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary); line-height: 0.4;" onclick="caricaPagina('pagine/avanzamento-carriera.html')">
                 Carriera
             </button>
-            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="caricaPagina('pagine/link-utili.html')">
+            <button class="btn" style="width: auto; margin: 0; padding: 8px 16px; font-size: 0.9rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary); line-height: 0.4;" onclick="caricaPagina('pagine/link-utili.html')">
                 Link utili
             </button>
         </div>
@@ -79,15 +76,15 @@
             </div>
         </div>
         
-        <div style="margin-top: 25px; padding: 15px 20px; background-color: #f4f7fa; border-radius: 12px; margin-bottom: 30px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; font-size: 0.95rem; border: 1px solid #e9ecef;">
+        <div style="margin-top: 35px; padding: 15px 20px; background-color: #f4f7fa; border-radius: 12px; margin-bottom: 30px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; font-size: 0.95rem; border: 1px solid #e9ecef;">
             <p style="color: var(--secondary); font-weight: bold; margin: 0;">Resta aggiornato sulle novità dell'Officina AT:</p>
-            <button class="btn btn-speciale" style="display: inline-flex; align-items: center; gap: 6px; width: auto; padding: 6px 15px; font-size: 0.9rem; background-color: white; color: var(--primary); border: 2px solid var(--primary); margin: 0; box-shadow: none;" onclick="caricaPagina('pagine/newsletter.html')">📩 Newsletter</button>
+            <button class="btn-back-hub" style="display: inline-flex; align-items: center; gap: 6px; width: auto; padding: 6px 15px; font-size: 0.9rem; background-color: white; color: var(--primary); border: 2px solid var(--primary); margin: 0; box-shadow: none; line-height: 0.4;" onclick="caricaPagina('pagine/newsletter.html')">📩 Newsletter</button>
         </div>
         
         <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
-            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.95rem; background-color: var(--secondary); border: none; color: white;" onclick="caricaPagina('pagine/come-diventare-at.html')">← Come si diventa AT</button>
-            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.95rem; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="tornaAllHub()">🏠 Torna all'Officina</button>
-            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.95rem; background-color: var(--primary); color: white; border: 2px solid var(--primary);" onclick="caricaPagina('pagine/avanzamento-carriera.html')">Carriera →</button>
+            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.85rem !important; background-color: var(--secondary); border: none; color: white;" onclick="caricaPagina('pagine/come-diventare-at.html')">← Come si diventa AT</button>
+            <button class="btn-back-hub" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.85rem !important; background-color: #f4f7fa; color: var(--primary); border: 2px solid var(--primary);" onclick="tornaAllHub()">🔧 Torna all'Officina</button>
+            <button class="btn" style="margin: 0; width: 220px; padding: 12px 15px; font-size: 0.85rem !important; background-color: var(--primary); color: white; border: 2px solid var(--primary);" onclick="caricaPagina('pagine/avanzamento-carriera.html')">Carriera →</button>
         </div>
     </div>
 </div>
