@@ -34,42 +34,62 @@ font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif !important;
     min-height: 100vh;
 }
 
-/* 2. HEADER E MENU (Stati Differenziati) */
+/* 2. HEADER E MENU (Stile a Pillola Moderno) */
 .header-officina {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 2px solid var(--primary);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.header-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-nav { display: flex; gap: 10px; }
 
 /* Bottoni Menu: Stato Riposo */
 .header-btn {
     background: transparent !important;
+    border: 2px solid transparent !important;
     color: var(--primary) !important;
-    border: 1px solid rgba(0, 74, 153, 0.3) !important;
-    font-weight: bold;
-    padding: 6px 12px !important;
-    margin: 0 4px;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    cursor: pointer;
+    padding: 8px 18px !important;
+    border-radius: 30px !important; /* Effetto Pillola */
     transition: all 0.3s ease !important;
+    margin: 0 !important;
 }
 
-/* Bottoni Menu: Stato Sopra (Hover) - Più sobrio ed elegante */
+/* Bottoni Menu: Hover (Passaggio del mouse) */
 .header-btn:hover {
-    background: rgba(0, 74, 153, 0.08) !important; /* Azzurrino trasparente molto delicato */
-    color: var(--primary) !important;
-    border-color: var(--primary) !important;
-    box-shadow: none !important; /* Rimosso l'effetto neon */
+    background-color: rgba(0, 74, 153, 0.08) !important;
+    color: var(--secondary) !important;
+    transform: translateY(-2px) !important;
 }
 
-/* Bottoni Menu: Stato Attivo (Selezionato / Click) */
-.header-btn.active, .header-btn:active {
-    background: var(--secondary) !important; /* Blu scuro professionale */
+/* Bottoni Menu: Stato Selezionato (Vince su tutti gli altri) */
+.header-btn.selezionato {
+    background-color: var(--primary) !important;
     color: white !important;
-    border-color: var(--secondary) !important;
-    transform: scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 74, 153, 0.25) !important;
+    transform: translateY(0) !important;
+}
+
+/* Fix Menu Smartphone */
+@media (max-width: 768px) {
+    .header-nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 8px; }
+    .header-btn { font-size: 0.9rem !important; padding: 8px 16px !important; border: 1px solid rgba(0, 74, 153, 0.2) !important; }
 }
 
 /* 3. HERO SECTION (Compatta + Immagine Dinamica) */
