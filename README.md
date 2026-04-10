@@ -1,78 +1,58 @@
 # Mappa del Sito - Officina AT
 
 ```mermaid
-graph TD
-    %% ==========================================
-    %% STILI DEI BLOCCHI (Colori personalizzati)
-    %% ==========================================
-    classDef root fill:#004a99,stroke:#002d5d,stroke-width:2px,color:#fff,font-weight:bold;
-    classDef core fill:#f8fafc,stroke:#94a3b8,stroke-width:2px,color:#334155;
-    classDef page fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0c4a6e;
-    classDef tool fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#7f1d1d;
-    classDef data fill:#fef08a,stroke:#ca8a04,stroke-width:2px,color:#854d0e;
-    classDef external fill:#f3f4f6,stroke:#9ca3af,stroke-width:2px,stroke-dasharray: 5 5;
+graph LR
+    %% Nodo Principale
+    Root["📂 giocaruso.github.io (Root)"]
 
-    %% ==========================================
-    %% 1. IL MOTORE CENTRALE (Root)
-    %% ==========================================
-    Hub["🏠 index.html<br>(Cuore dell'Officina)"]:::root
-    CSS["🎨 style.css<br>(Grafica Globale)"]:::core
-    JS["⚙️ script.js<br>(Motore Single-Page)"]:::core
-    Privacy["📄 privacy.html<br>(Pagina Autonoma)"]:::core
+    %% File di base nella root
+    Root --> Index["📄 index.html (Home Page)"]
+    Root --> Style["📄 style.css (Grafica)"]
+    Root --> Script["📄 script.js (Motore)"]
 
-    %% I componenti iniettati da script.js
-    Header["🗂️ header.html<br>(Menu Navigazione)"]:::core
-    Footer["🗂️ footer.html<br>(Piè di pagina)"]:::core
+    %% Cartella Immagini
+    Root --> ImgFolder["📁 img"]
+    ImgFolder --> Img1["assistente-tecnico-collage.jpg"]
+    ImgFolder --> Img2["assistente-tecnico.jpg"]
+    ImgFolder --> Img3["copertina-200quiz.jpg"]
+    ImgFolder --> Img4["copertina-oltre-profilo.jpg"]
+    ImgFolder --> Img5["copertina-tutti-possono.jpg"]
 
-    %% Collegamenti del Motore
-    Hub -. "Carica" .-> CSS
-    Hub -. "Carica" .-> JS
-    JS -. "Inietta" .-> Header
-    JS -. "Inietta" .-> Footer
-    Footer --> Privacy
+    %% Cartella JSON (Database)
+    Root --> JsonFolder["📁 json"]
+    JsonFolder --> Json1["🗃️ antincendio-lv2-cat.json"]
+    JsonFolder --> Json2["🗃️ quiz-antincendio-lv2-ufficiale-VVF.json"]
+    JsonFolder --> Json3["🗃️ quiz-at-200.json"]
 
-    %% ==========================================
-    %% 2. PAGINE DEI CONTENUTI (Cartella /pagine)
-    %% ==========================================
-    subgraph Contenuti [Pagine Interne Caricate Dinamicamente]
-        ChiSono["👤 pagine/chi-sono.html"]:::page
-        AreaTest["💻 pagine/area-test.html"]:::page
-        Newsletter["📢 pagine/newsletter.html"]:::page
-        Prof["🎓 pagine/come-diventare-at.html"]:::page
-        CosaFa["⚙️ pagine/cosa-fa-un-tecnico.html"]:::page
-        Carriera["📈 pagine/avanzamento-carriera.html"]:::page
-        LinkUtili["🌐 pagine/link-utili.html"]:::page
-    end
+    %% Cartella Pagine (Cassetti e componenti)
+    Root --> PagineFolder["📁 pagine"]
 
-    %% Navigazione dal Menu (Header)
-    Header -->|Click| AreaTest
-    Header -->|Click| Prof
-    Header -->|Click| ChiSono
-    Header -. "Torna" .-> Hub
+    %% Pagine base e componenti
+    PagineFolder --> Header["📄 header.html"]
+    PagineFolder --> Footer["📄 footer.html"]
+    PagineFolder --> Privacy["📄 privacy.html"]
+    PagineFolder --> ChiSono["📄 chi-sono.html"]
+    PagineFolder --> Newsletter["📄 newsletter.html"]
 
-    %% Navigazione dalle Card della Home
-    Hub -->|Card| Newsletter
-    Hub -->|Card| CosaFa
-    Hub -->|Card| Carriera
-    Hub -->|Card| LinkUtili
-    Hub -->|Card| Prof
+    %% Sezione: Area Test e Simulatori
+    PagineFolder --> AreaTestGroup["🛠️ AREA TEST E SIMULATORI"]
+    AreaTestGroup --> AreaTestMain["📄 area-test.html"]
+    AreaTestMain --> Manuale3["📄 manuale-3-quiz-at.html"]
+    Manuale3 --> CruscottoM3["📄 cruscotto-quiz-manuale-3.html"]
+    AreaTestGroup --> CruscottoAnti["📄 cruscotto-quiz-antincendio-at.html"]
+    AreaTestGroup --> MotoreQuiz["📄 motore-universale-quiz.html"]
 
-    %% ==========================================
-    %% 3. AREA SIMULATORI E STRUMENTI
-    %% ==========================================
-    subgraph Simulatori [Strumenti e Database Quiz]
-        CruscottoFuoco["🧯 cruscotto-quiz-antincendio-at.html"]:::tool
-        JSON1[("antincendio-lv2-cat.json")]:::data
-        JSON2[("quiz-antincendio-lv2-ufficiale-VVF.json")]:::data
-    end
+    %% Sezione: La Professione
+    PagineFolder --> ProfessioneGroup["💼 LA PROFESSIONE"]
+    ProfessioneGroup --> ComeDiventare["📄 come-diventare-at.html"]
+    ProfessioneGroup --> CosaFa["📄 cosa-fa-un-tecnico.html"]
+    ProfessioneGroup --> Carriera["📄 avanzamento-carriera.html"]
+    ProfessioneGroup --> LinkUtili["📄 link-utili.html"]
 
-    AreaTest -->|Apri| CruscottoFuoco
-    CruscottoFuoco -. "Legge Dati" .-> JSON1
-    CruscottoFuoco -. "Legge Dati" .-> JSON2
-
-    %% ==========================================
-    %% 4. RISORSE ESTERNE
-    %% ==========================================
-    Appunti["📚 Libri Pubblicati<br>(Link Amazon)"]:::external
-    Hub -->|Card Libri| Appunti
-    Header -->|Bottone Appunti| Appunti
+    %% Stili personalizzati per dare colore e ordine ai blocchi
+    style Root fill:#0052cc,stroke:#000,stroke-width:2px,color:#fff
+    style ImgFolder fill:#f9a825,stroke:#000,stroke-width:1px,color:#000
+    style JsonFolder fill:#f9a825,stroke:#000,stroke-width:1px,color:#000
+    style PagineFolder fill:#f9a825,stroke:#000,stroke-width:1px,color:#000
+    style AreaTestGroup fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style ProfessioneGroup fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
